@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karthik Peddavarapu — Senior Data Engineer</title>
+<title>Karthik Peddavarapu — Senior Data and MES Engineer</title>
+<meta name="description" content="Senior Data and MES Engineer at Eli Lilly. 7+ years building ETL pipelines, cloud analytics, and MES/ERP integrations in regulated pharma manufacturing.">
+<meta property="og:title" content="Karthik Peddavarapu — Senior Data & MES Engineer">
+<meta property="og:description" content="7+ years designing scalable data pipelines, cloud architectures, and MES/ERP integrations in regulated pharma manufacturing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -114,6 +117,13 @@ nav {
   border: 1px solid var(--rule2); transition: border-color 0.2s, color 0.2s;
 }
 .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px;
+  background: transparent; color: var(--slate-lt); font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; border-radius: 3px;
+  border: 1px solid rgba(200,169,110,0.3); color: var(--gold); transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline:hover { background: rgba(200,169,110,0.08); border-color: var(--gold); }
 .hero-metrics { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--rule); }
 .metric-num { font-family: var(--display); font-size: 2.4rem; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 6px; }
 .metric-num sup { font-size: 1.2rem; color: var(--gold); }
@@ -131,7 +141,7 @@ nav {
   border: 1px solid var(--rule2); display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 16px; overflow: hidden; position: relative;
 }
-.photo-box::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(37,77,158,0.15) 0%, transparent 60%); }
+.photo-box::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(37,77,158,0.15) 0%, transparent 60%); pointer-events: none; }
 .photo-initials {
   width: 90px; height: 90px; border-radius: 50%;
   background: linear-gradient(135deg, var(--navy-600), var(--navy-400));
@@ -195,7 +205,7 @@ nav {
 .exp-nav-co { font-family: var(--mono); font-size: 10px; color: var(--slate); margin-top: 2px; }
 .exp-entries { display: flex; flex-direction: column; gap: 4rem; }
 .exp-entry-header { margin-bottom: 1.25rem; }
-.exp-role-line { display: flex; align-items: center; gap: 12px; margin-bottom: 0.4rem; }
+.exp-role-line { display: flex; align-items: center; gap: 12px; margin-bottom: 0.4rem; flex-wrap: wrap; }
 .exp-role { font-family: var(--display); font-size: 1.4rem; font-weight: 600; color: var(--white); }
 .exp-tag { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; }
 .tag-current { background: rgba(200,169,110,0.12); border: 1px solid rgba(200,169,110,0.3); color: var(--gold); }
@@ -207,6 +217,7 @@ nav {
 .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
 .exp-bullets li { display: flex; gap: 12px; font-size: 14px; color: var(--slate-lt); font-weight: 300; line-height: 1.75; }
 .exp-bullets li::before { content: '—'; color: var(--gold); opacity: 0.6; flex-shrink: 0; font-family: var(--mono); font-size: 12px; margin-top: 3px; }
+.exp-bullets li strong { color: var(--white); font-weight: 500; }
 
 /* PROJECTS */
 #projects { background: var(--navy-950); }
@@ -221,8 +232,11 @@ nav {
 .proj-idx { font-family: var(--display); font-size: 3rem; font-weight: 700; color: var(--navy-800); line-height: 1; margin-bottom: 1rem; }
 .proj-title { font-family: var(--display); font-size: 15px; font-weight: 600; color: var(--white); line-height: 1.35; margin-bottom: 0.75rem; }
 .proj-desc { font-size: 13px; color: var(--slate); line-height: 1.75; flex: 1; margin-bottom: 1.25rem; font-weight: 300; }
-.proj-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.proj-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; }
 .proj-tag { font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; padding: 3px 9px; border-radius: 2px; background: var(--navy-800); color: var(--slate-lt); border: 1px solid var(--rule); }
+.proj-link { font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; color: var(--gold); text-decoration: none; white-space: nowrap; opacity: 0.7; transition: opacity 0.2s; }
+.proj-link:hover { opacity: 1; }
 
 /* CERTIFICATIONS */
 #certifications { background: var(--navy-900); }
@@ -230,7 +244,7 @@ nav {
 .certs-list { display: flex; flex-direction: column; gap: 1rem; }
 .cert-item { display: flex; align-items: center; gap: 1.25rem; background: var(--navy-800); border: 1px solid var(--rule); border-radius: 6px; padding: 1.25rem 1.5rem; transition: border-color 0.2s; }
 .cert-item:hover { border-color: rgba(200,169,110,0.3); }
-.cert-mark { width: 44px; height: 44px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; background: var(--navy-700); border: 1px solid var(--rule2); }
+.cert-mark { width: 44px; height: 44px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; background: var(--navy-700); border: 1px solid var(--rule2); font-family: var(--mono); font-weight: 500; color: var(--gold); }
 .cert-name { font-size: 14px; font-weight: 400; color: var(--white); margin-bottom: 3px; }
 .cert-org  { font-family: var(--mono); font-size: 10px; color: var(--slate); letter-spacing: 0.06em; }
 .edu-list { display: flex; flex-direction: column; gap: 1rem; }
@@ -247,7 +261,7 @@ nav {
 .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 560px; }
 .contact-item { display: flex; align-items: center; gap: 14px; background: var(--navy-900); border: 1px solid var(--rule); border-radius: 6px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
 .contact-item:hover { border-color: rgba(200,169,110,0.3); background: var(--navy-800); }
-.contact-icon { width: 36px; height: 36px; border-radius: 4px; background: var(--navy-700); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.contact-icon { width: 36px; height: 36px; border-radius: 4px; background: var(--navy-700); display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; font-family: var(--mono); color: var(--gold); font-weight: 500; }
 .contact-item-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); margin-bottom: 2px; }
 .contact-item-val   { font-size: 13px; color: var(--white); font-weight: 400; }
 
@@ -290,6 +304,7 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
   .contact-grid { grid-template-columns: 1fr; }
   footer { padding: 1.5rem; }
   .hero-metrics { flex-wrap: wrap; gap: 2rem; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
@@ -316,7 +331,7 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
   <div class="hero-bg-lines"></div>
   <div class="hero-bg-glow"></div>
   <div class="hero-left">
-    <div class="hero-eyebrow">Senior Data Engineer </div>
+    <div class="hero-eyebrow">Senior Data and MES Engineer</div>
     <h1 class="hero-name">Karthik<br><em>Peddavarapu</em></h1>
     <div class="hero-title-bar">
       <span class="hero-role">MES Systems · Cloud Analytics · Data Pipelines</span>
@@ -324,18 +339,25 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
     <p class="hero-desc">Building enterprise-grade data pipelines, cloud architectures, and analytics platforms that transform raw manufacturing and operational data into decisions that drive performance, quality, and compliance.</p>
     <div class="hero-actions">
       <a href="#experience" class="btn-gold">View Experience</a>
+      <a href="Karthik_Peddavarapu_Resume.pdf" class="btn-outline" download>Download Resume</a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
     <div class="hero-metrics">
-      <div><div class="metric-num">6<sup>+</sup></div><div class="metric-label">Years Experience</div></div>
+      <div><div class="metric-num">7<sup>+</sup></div><div class="metric-label">Years Experience</div></div>
       <div><div class="metric-num">9<sup>+</sup></div><div class="metric-label">Projects Delivered</div></div>
-      <div><div class="metric-num">2</div><div class="metric-label">Certifications</div></div>
+      <div><div class="metric-num">3</div><div class="metric-label">Certifications</div></div>
     </div>
   </div>
   <div class="hero-right">
     <div class="photo-frame">
       <div class="photo-box">
-        <img src="profile.jpg" alt="Profile" style="width:100%; height:100%; object-fit:cover; border-radius:6px;">
+        <div class="photo-initials">KP</div>
+        <div class="photo-hint">profile.jpg</div>
+      </div>
+      <div class="photo-badge">
+        <div class="photo-badge-title">Current Role</div>
+        <div class="photo-badge-val">Senior Engineer · Eli Lilly</div>
+      </div>
     </div>
   </div>
 </section>
@@ -347,20 +369,20 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
     <h2 class="section-heading">Data Engineer with a<br><em>manufacturing edge</em></h2>
     <div class="about-layout">
       <div class="about-body">
-        <p>I'm a <strong>Senior Data Engineer</strong> with over six years of experience designing and optimizing data systems across pharmaceutical manufacturing, regulated GxP environments, and enterprise analytics. My work sits at the intersection of <strong>data engineering, operational intelligence, and cloud infrastructure</strong>.</p>
-        <p>Currently at <strong>Eli Lilly and Company</strong> on the IDAP MES Systems team, I design ETL/ELT pipelines that power real-time visibility into production performance — from equipment utilization and batch integrity to SLA compliance and regulatory reporting. Every pipeline I build is built for <strong>accuracy, traceability, and governance</strong>.</p>
-        <p>My technical toolkit spans <strong>Azure</strong> (Data Factory, Synapse Analytics, Databricks, Microsoft Fabric), <strong>AWS</strong> (S3, Lambda, Glue, Athena, Redshift), Python, Advanced SQL, KQL/Kusto, Apache Spark, and Power BI. I'm equally at home modeling star-schema warehouses, building CI/CD-ready pipelines, or creating executive dashboards that make complex data immediately actionable.</p>
-        <p>Before moving to the United States, I spent over five years at <strong>Dr. Reddy's Laboratories</strong> in India, growing from a Manufacturing Executive to a senior MES &amp; Data Analyst — gaining deep hands-on experience with pharmaceutical batch systems, SAP ERP, PAS-X MES, and GxP compliance at scale.</p>
-        <p>I hold a <strong>Master of Science in Business Analytics &amp; AI</strong> from the University of Texas at Dallas, where I also applied SQL and Power BI to real operational analytics challenges as a Student Library Assistant.</p>
+        <p>I'm a <strong>Senior Data and MES Engineer</strong> with 7+ years of experience designing scalable data systems across pharmaceutical manufacturing, regulated GxP environments, and enterprise analytics. My work sits at the intersection of <strong>data engineering, operational intelligence, and cloud infrastructure</strong>.</p>
+        <p>Currently at <strong>Eli Lilly and Company</strong>, I architect ETL/ELT pipelines processing millions of manufacturing records daily with 99.9% reliability — reducing pipeline latency by 35% and cutting failures by 40% through automated monitoring frameworks. Every pipeline I build is designed for <strong>accuracy, traceability, and GxP compliance</strong>.</p>
+        <p>My technical toolkit spans <strong>Azure</strong> (Data Factory, Synapse Analytics, Databricks, Microsoft Fabric), <strong>AWS</strong> (S3, Lambda, Glue, Athena, Redshift), Python, Advanced SQL, PySpark, Apache Airflow, and Power BI. I'm equally at home modeling star-schema warehouses, building CI/CD-ready pipelines, or creating executive dashboards that make complex operational data immediately actionable.</p>
+        <p>Before moving to the United States, I spent 6 years at <strong>Dr. Reddy's Laboratories</strong> in India, growing from a Manufacturing Executive through MES Associate to a senior Data Analyst — gaining deep hands-on experience with PAS-X MES, SAP ERP, electronic batch records, and GxP compliance at scale across 500+ batch records monthly.</p>
+        <p>I hold a <strong>Master of Science in Business Analytics & AI</strong> from the University of Texas at Dallas, and I'm passionate about Industry 4.0, digital transformation in life sciences, and building data infrastructure that bridges the shop floor and the boardroom.</p>
       </div>
       <div>
-        <div class="info-row"><div class="info-label">Current Position</div><div class="info-val">Senior Engineer – IDAP MES Systems</div></div>
+        <div class="info-row"><div class="info-label">Current Position</div><div class="info-val">Senior Data & MES Engineer</div></div>
         <div class="info-row"><div class="info-label">Employer</div><div class="info-val">Eli Lilly and Company · Full-time</div></div>
         <div class="info-row"><div class="info-label">Location</div><div class="info-val">Indianapolis, IN · Open to remote / hybrid</div></div>
-        <div class="info-row"><div class="info-label">Education</div><div class="info-val">MS Business Analytics &amp; AI · UT Dallas, 2025</div></div>
+        <div class="info-row"><div class="info-label">Education</div><div class="info-val">MS Business Analytics & AI · UT Dallas, 2025</div></div>
         <div class="info-row"><div class="info-label">Industries</div><div class="info-val">Pharma · Manufacturing · Healthcare · Enterprise</div></div>
         <div class="info-row"><div class="info-label">Email</div><div class="info-val"><a href="mailto:pkarthikusa1@gmail.com">pkarthikusa1@gmail.com</a></div></div>
-        <div class="info-row"><div class="info-label">LinkedIn</div><div class="info-val"><a href="https://www.linkedin.com/in/karthik-peddavarrapu/" target="_blank">karthik-peddavarrapu</a></div></div>
+        <div class="info-row"><div class="info-label">LinkedIn</div><div class="info-val"><a href="https://www.linkedin.com/in/karthikpeddavarrapu/" target="_blank">karthikpeddavarrapu</a></div></div>
         <div class="info-row"><div class="info-label">GitHub</div><div class="info-val"><a href="https://github.com/Karthik9492" target="_blank">Karthik9492</a></div></div>
       </div>
     </div>
@@ -374,9 +396,9 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
     <h2 class="section-heading">Tools &amp; <em>technologies</em></h2>
     <div class="skills-layout">
       <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">Cloud Platforms</div></div><div class="skill-pills"><span class="skill-pill">Azure Data Factory</span><span class="skill-pill">Azure Synapse</span><span class="skill-pill">Azure Databricks</span><span class="skill-pill">Microsoft Fabric</span><span class="skill-pill">Azure ADLS</span><span class="skill-pill">Azure ML</span><span class="skill-pill">AWS S3</span><span class="skill-pill">AWS Lambda</span><span class="skill-pill">AWS Glue</span><span class="skill-pill">AWS Athena</span><span class="skill-pill">AWS Redshift</span><span class="skill-pill">Snowflake</span></div></div>
-      <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">Big Data &amp; Pipelines</div></div><div class="skill-pills"><span class="skill-pill">Apache Spark (PySpark)</span><span class="skill-pill">Apache Airflow</span><span class="skill-pill">Delta Lake</span><span class="skill-pill">ETL / ELT</span><span class="skill-pill">CDC</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Docker</span><span class="skill-pill">MLflow</span><span class="skill-pill">Hadoop</span><span class="skill-pill">Stream Processing</span></div></div>
-      <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">Languages &amp; Query</div></div><div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">Advanced SQL</span><span class="skill-pill">KQL / Kusto</span><span class="skill-pill">T-SQL</span><span class="skill-pill">R</span><span class="skill-pill">REST API</span><span class="skill-pill">Pandas</span><span class="skill-pill">NumPy</span><span class="skill-pill">Scikit-learn</span></div></div>
-      <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">BI &amp; Visualization</div></div><div class="skill-pills"><span class="skill-pill">Power BI</span><span class="skill-pill">DAX</span><span class="skill-pill">Power Automate</span><span class="skill-pill">M365 Dataverse</span><span class="skill-pill">Tableau</span><span class="skill-pill">Excel VBA</span><span class="skill-pill">KPI Dashboards</span><span class="skill-pill">SLA Monitoring</span></div></div>
+      <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">Big Data &amp; Pipelines</div></div><div class="skill-pills"><span class="skill-pill">Apache Spark (PySpark)</span><span class="skill-pill">Apache Airflow</span><span class="skill-pill">Delta Lake</span><span class="skill-pill">Apache Iceberg</span><span class="skill-pill">ETL / ELT</span><span class="skill-pill">CDC</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Docker</span><span class="skill-pill">MLflow</span><span class="skill-pill">Hadoop</span><span class="skill-pill">Stream Processing</span></div></div>
+      <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">Languages &amp; Query</div></div><div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">Advanced SQL</span><span class="skill-pill">KQL / Kusto</span><span class="skill-pill">T-SQL</span><span class="skill-pill">REST API</span><span class="skill-pill">Pandas</span><span class="skill-pill">NumPy</span><span class="skill-pill">Scikit-learn</span></div></div>
+      <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">BI &amp; Visualization</div></div><div class="skill-pills"><span class="skill-pill">Power BI</span><span class="skill-pill">DAX</span><span class="skill-pill">Power Automate</span><span class="skill-pill">Power Apps</span><span class="skill-pill">M365 Dataverse</span><span class="skill-pill">Tableau</span><span class="skill-pill">Excel VBA</span><span class="skill-pill">KPI Dashboards</span><span class="skill-pill">SLA Monitoring</span></div></div>
       <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">Machine Learning &amp; AI</div></div><div class="skill-pills"><span class="skill-pill">Classification</span><span class="skill-pill">Regression</span><span class="skill-pill">Clustering</span><span class="skill-pill">ARIMA</span><span class="skill-pill">LSTM / RNN</span><span class="skill-pill">NLP</span><span class="skill-pill">Azure ML</span><span class="skill-pill">Feature Engineering</span></div></div>
       <div class="skill-cell"><div class="skill-cell-head"><div class="skill-dot"></div><div class="skill-cell-title">MES, ERP &amp; Governance</div></div><div class="skill-pills"><span class="skill-pill">PAS-X MES</span><span class="skill-pill">SAP S/4HANA</span><span class="skill-pill">ISA-88 / ISA-95</span><span class="skill-pill">GxP / FDA</span><span class="skill-pill">ALCOA+</span><span class="skill-pill">MDM</span><span class="skill-pill">Data Lineage</span><span class="skill-pill">Data Governance</span></div></div>
     </div>
@@ -390,84 +412,94 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
     <h2 class="section-heading">Professional <em>experience</em></h2>
     <div class="exp-layout">
       <div class="exp-nav">
-        <div class="exp-nav-item active"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">Senior Engineer – IDAP MES</div><div class="exp-nav-co">Eli Lilly · 2025–Present</div></div></div>
-        <div class="exp-nav-item"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">Student Library Assistant</div><div class="exp-nav-co">UT Dallas · 2024–2025</div></div></div>
-        <div class="exp-nav-item"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">MES and Operations Data Analyst</div><div class="exp-nav-co">Dr. Reddy's · 2020–2023</div></div></div>
-        <div class="exp-nav-item"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">MES Associate</div><div class="exp-nav-co">Dr. Reddy's · 2019–2020</div></div></div>
-        <div class="exp-nav-item"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">Manufacturing Executive</div><div class="exp-nav-co">Dr. Reddy's · 2017–2019</div></div></div>
+        <div class="exp-nav-item active"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">Senior Data and MES Engineer</div><div class="exp-nav-co">Eli Lilly · 2025–Present</div></div></div>
+        <div class="exp-nav-item"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">Student Data Assistant</div><div class="exp-nav-co">UT Dallas · 2024–2025</div></div></div>
+        <div class="exp-nav-item"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">Operations Data Analyst and MES Engineer</div><div class="exp-nav-co">Dr. Reddy's · 2020–2023</div></div></div>
+        <div class="exp-nav-item"><div class="exp-nav-dot"></div><div><div class="exp-nav-role">MES Associate – Data and Systems Engineering</div><div class="exp-nav-co">Dr. Reddy's · 2017–2020</div></div></div>
       </div>
       <div class="exp-entries">
 
+        <!-- Eli Lilly -->
         <div class="exp-entry">
           <div class="exp-entry-header">
-            <div class="exp-role-line"><div class="exp-role">Senior Engineer – IDAP MES Systems</div><span class="exp-tag tag-current">Current</span></div>
+            <div class="exp-role-line">
+              <div class="exp-role">Senior Data and MES Engineer</div>
+              <span class="exp-tag tag-current">Current</span>
+            </div>
             <div class="exp-company">Eli Lilly and Company · Full-time</div>
-            <div class="exp-meta">Nov 2025 – Present · 5 mos · Indianapolis, IN</div>
+            <div class="exp-meta">Nov 2025 – Present · Indianapolis, IN</div>
           </div>
           <div class="exp-divider"></div>
           <ul class="exp-bullets">
-            <li>Design and maintain ETL/ELT pipelines ingesting manufacturing and MES data into cloud platforms, enforcing data quality, completeness, and GxP/ALCOA+ compliance at every stage.</li>
-            <li>Build Power BI dashboards tracking production KPIs — downtime, yield, throughput, SLA compliance, and supplier scorecards — for operations leadership and senior stakeholders.</li>
-            <li>Integrate MES master data (equipment, materials, recipes, batch configurations) via REST APIs and SQL validation, ensuring full data accuracy, traceability, and lineage.</li>
-            <li>Implement performance monitoring and root cause analysis workflows to detect, isolate, and resolve data anomalies proactively across regulated downstream systems.</li>
-            <li>Partner with engineering, QA, and operations teams to develop trusted datasets for modeling, reporting, and regulatory audit readiness.</li>
+            <li>Architect and deploy scalable ETL/ELT pipelines ingesting data from MES and ERP systems via REST APIs and SQL interfaces, processing <strong>millions of manufacturing records daily</strong> with <strong>99.9% pipeline reliability</strong> across GxP-regulated environments.</li>
+            <li>Reduced data pipeline latency by <strong>35%</strong> through query optimization, partitioning strategies, and Delta Lake data modeling, enabling near real-time visibility into production KPIs for operations leadership.</li>
+            <li>Built and maintain <strong>5+ Power BI dashboards</strong> tracking yield, downtime, throughput, SLA compliance, and supplier scorecards using DAX measures and Power Automate for automated reporting workflows.</li>
+            <li>Implemented automated data validation and monitoring frameworks, cutting pipeline failures by <strong>40%</strong> and ensuring SLA compliance for mission-critical manufacturing analytics.</li>
+            <li>Developed a Mentorship Connect Power App integrated with Power Automate, eliminating <strong>100% of manual coordination effort</strong> and reducing program onboarding time by <strong>50%</strong> across 3 departments.</li>
+            <li>Built a Document Routing & Approval Power App automating GxP document review and audit trail capture — reducing manual handling by <strong>70%</strong> and cutting approval cycle time from <strong>5 days to under 1 day</strong>.</li>
+            <li>Designed an AI-powered Production Ideas Power App integrated with Azure AI for auto-tagging, generating <strong>40+ actionable innovation ideas</strong> in the first quarter.</li>
+            <li>Collaborate with cross-functional engineering, QA, automation, and operations teams to validate data integration and transformation logic, supporting regulatory audits and GxP compliance.</li>
           </ul>
         </div>
 
+        <!-- UTD -->
         <div class="exp-entry">
           <div class="exp-entry-header">
-            <div class="exp-role-line"><div class="exp-role">Student Library Assistant</div><span class="exp-tag tag-edu">Part-time</span></div>
+            <div class="exp-role-line">
+              <div class="exp-role">Student Data and Reporting Assistant</div>
+              <span class="exp-tag tag-edu">Part-time</span>
+            </div>
             <div class="exp-company">University of Texas at Dallas</div>
-            <div class="exp-meta">Jul 2024 – May 2025 · 11 mos · Richardson, TX</div>
+            <div class="exp-meta">Jul 2024 – May 2025 · Richardson, TX</div>
           </div>
           <div class="exp-divider"></div>
           <ul class="exp-bullets">
-            <li>Developed and maintained Power BI dashboards monitoring operational metrics, utilization trends, and performance KPIs for university leadership and planning teams.</li>
-            <li>Wrote and optimized Advanced SQL queries (CTEs, window functions, joins) to extract and transform structured datasets for accurate, timely reporting.</li>
-            <li>Performed trend and comparative analysis using SQL and Power BI; defined and validated KPIs with stakeholders to support data-driven resource allocation decisions.</li>
+            <li>Authored and optimized <strong>30+ advanced SQL queries</strong> (CTEs, window functions, joins, aggregations) to extract and transform structured datasets, reducing manual reporting effort by <strong>60%</strong>.</li>
+            <li>Built and maintained Power BI dashboards using DAX and Power Automate to monitor operational metrics for 5+ stakeholder groups, saving <strong>8+ hours per week</strong>.</li>
+            <li>Conducted trend and comparative analysis across exam and non-exam periods, enabling data-driven resource allocation decisions for 3 operational departments.</li>
+            <li>Defined and validated KPIs with stakeholders; documented data classifications and lineage to enforce governance standards and traceability across reporting systems.</li>
           </ul>
         </div>
 
+        <!-- Dr Reddys Analyst -->
         <div class="exp-entry">
           <div class="exp-entry-header">
-            <div class="exp-role-line"><div class="exp-role">MES and Operations Data Analyst</div><span class="exp-tag tag-pharma">Pharma</span></div>
+            <div class="exp-role-line">
+              <div class="exp-role">Operations Data Analyst and MES Engineer</div>
+              <span class="exp-tag tag-pharma">Pharma</span>
+            </div>
             <div class="exp-company">Dr. Reddy's Laboratories · Full-time</div>
-            <div class="exp-meta">Dec 2020 – Jun 2023 · 2 yrs 7 mos · India</div>
+            <div class="exp-meta">Dec 2020 – Jun 2023 · Hyderabad, India</div>
           </div>
           <div class="exp-divider"></div>
           <ul class="exp-bullets">
-            <li>Designed ETL pipelines and SQL transformation logic; built star/snowflake schema data models improving reporting accuracy by 40% and strengthening enterprise data trust.</li>
-            <li>Built Power BI and Tableau dashboards monitoring enterprise KPIs, data integrity, and operational trends at scale for business stakeholders.</li>
-            <li>Extracted and validated raw data from ERP/MES systems via REST APIs; enforced MDM and data governance policies aligned with FDA/GxP regulatory standards.</li>
-            <li>Identified operational inefficiencies through analytics, contributing to a 15% reduction in equipment downtime across production lines.</li>
+            <li>Designed ETL pipelines and star/snowflake schema data models integrating SAP ERP and PAS-X MES data, improving reporting accuracy by <strong>40%</strong> and query performance by <strong>35%</strong>.</li>
+            <li>Built <strong>15+ interactive Power BI and Tableau dashboards</strong> monitoring KPIs, data integrity, and operational performance trends for real-time business decision-making.</li>
+            <li>Identified operational inefficiencies through advanced analytics and statistical analysis, contributing to a <strong>15% reduction in manufacturing downtime</strong> and measurable throughput improvement.</li>
+            <li>Validated and reconciled raw data from ERP/MES systems via REST APIs; strengthened enterprise data trust across <strong>3 business units</strong> through MDM and data governance aligned with FDA/GxP standards.</li>
+            <li>Supported MDM and data governance processes, ensuring full compliance with FDA, GxP, and ALCOA+ standards with complete data lineage documentation.</li>
+            <li>Collaborated with Data Engineering, IT, QA, and operations teams to validate integration and transformation logic across Azure ADLS and Snowflake platforms.</li>
           </ul>
         </div>
 
+        <!-- Dr Reddys MES -->
         <div class="exp-entry">
           <div class="exp-entry-header">
-            <div class="exp-role-line"><div class="exp-role">MES Associate</div><span class="exp-tag tag-pharma">Pharma</span></div>
+            <div class="exp-role-line">
+              <div class="exp-role">MES Associate – Data and Systems Engineering</div>
+              <span class="exp-tag tag-pharma">Pharma</span>
+            </div>
             <div class="exp-company">Dr. Reddy's Laboratories · Full-time</div>
-            <div class="exp-meta">Dec 2019 – Dec 2020 · 1 yr 1 mo · India</div>
+            <div class="exp-meta">Jul 2017 – Dec 2020 · Hyderabad, India</div>
           </div>
           <div class="exp-divider"></div>
           <ul class="exp-bullets">
-            <li>Validated large-scale production and master data from PAS-X MES and SAP ERP systems; performed integrity checks across 500+ batch records monthly.</li>
-            <li>Developed SQL and Excel-based reports and dashboards (PivotTables, VBA macros) monitoring operational KPIs and deviation trends in a regulated GxP environment.</li>
-            <li>Supported MDM activities — material master, equipment master, recipes, batch configurations — ensuring alignment with enterprise data standards and business requirements.</li>
-          </ul>
-        </div>
-
-        <div class="exp-entry">
-          <div class="exp-entry-header">
-            <div class="exp-role-line"><div class="exp-role">Manufacturing Executive</div><span class="exp-tag tag-pharma">Pharma</span></div>
-            <div class="exp-company">Dr. Reddy's Laboratories · Full-time</div>
-            <div class="exp-meta">Jul 2017 – Dec 2019 · 2 yrs 6 mos · India</div>
-          </div>
-          <div class="exp-divider"></div>
-          <ul class="exp-bullets">
-            <li>Supported manufacturing operations in a regulated GxP pharmaceutical environment, ensuring batch data accuracy and compliance with FDA and internal quality standards.</li>
-            <li>Partnered with QA, production, and IT teams on data readiness, validation, and compliance for downstream reporting platforms and regulatory audits.</li>
-            <li>Contributed to change control processes, master data updates, and validated system enhancements across production systems.</li>
+            <li>Analyzed and validated large-scale production and master data from PAS-X MES and SAP ERP systems using Advanced SQL across <strong>500+ batch records monthly</strong>, maintaining <strong>99%+ data accuracy</strong> in GxP environments.</li>
+            <li>Supported MDM activities covering material master, equipment master, recipes, and batch configurations — reducing master data discrepancies by <strong>30%</strong>.</li>
+            <li>Developed SQL- and Excel-based reports and VBA-automated dashboards to monitor operational KPIs, deviation trends, yield performance, and data quality metrics.</li>
+            <li>Conducted root cause analysis of data discrepancies; collaborated with QA, IT, and Production teams to implement corrective actions, improving data quality scores by <strong>20%</strong>.</li>
+            <li>Executed electronic batch records (eBR) through PAS-X MES, ensuring strict adherence to GMP and FDA regulations across manufacturing operations.</li>
+            <li>Documented data type, classification, and lineage to ensure end-to-end traceability; contributed to internal data governance policies and audit-readiness protocols.</li>
           </ul>
         </div>
 
@@ -482,15 +514,60 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
     <div class="section-eyebrow">Selected Work</div>
     <h2 class="section-heading">Projects &amp; <em>builds</em></h2>
     <div class="projects-grid">
-      <div class="proj-card"><div class="proj-idx">01</div><div class="proj-title">Healthcare Price Transparency – Azure Synapse &amp; Power BI</div><div class="proj-desc">SQL-based ETL transformation logic in Azure Synapse Analytics with Power BI semantic models for cross-hospital pricing analysis. Governed, traceable datasets enabling scalable healthcare analytics.</div><div class="proj-tags"><span class="proj-tag">Azure Synapse</span><span class="proj-tag">Power BI</span><span class="proj-tag">T-SQL</span><span class="proj-tag">Data Lineage</span></div></div>
-      <div class="proj-card"><div class="proj-idx">02</div><div class="proj-title">Healthcare Price Transparency Pipeline – AWS</div><div class="proj-desc">Automated ETL pipeline via AWS Lambda, Glue Data Catalog, and Athena ingesting and analyzing hospital pricing datasets. Identified pricing variations across hospitals and regions at scale.</div><div class="proj-tags"><span class="proj-tag">AWS Lambda</span><span class="proj-tag">AWS Glue</span><span class="proj-tag">AWS Athena</span><span class="proj-tag">ETL</span></div></div>
-      <div class="proj-card"><div class="proj-idx">03</div><div class="proj-title">Customer &amp; Sales Analytics – Advanced SQL &amp; Tableau</div><div class="proj-desc">25+ advanced SQL queries (CTEs, window functions, subqueries) for customer segmentation, revenue trends, and product profitability. Interactive Tableau and Power BI dashboards for BI reporting.</div><div class="proj-tags"><span class="proj-tag">Advanced SQL</span><span class="proj-tag">Tableau</span><span class="proj-tag">Power BI</span><span class="proj-tag">Segmentation</span></div></div>
-      <div class="proj-card"><div class="proj-idx">04</div><div class="proj-title">HR Analytics Dashboard – Power BI / DAX</div><div class="proj-desc">Interactive Power BI HR dashboard analyzing employee attrition across demographics, roles, salary bands, and tenure. Dynamic department-level KPIs using DAX measures and M365 Dataverse.</div><div class="proj-tags"><span class="proj-tag">Power BI</span><span class="proj-tag">DAX</span><span class="proj-tag">M365 Dataverse</span><span class="proj-tag">Power Platform</span></div></div>
-      <div class="proj-card"><div class="proj-idx">05</div><div class="proj-title">Bitcoin Price Trend Analysis – Python Time-Series</div><div class="proj-desc">ARIMA-based time-series analysis on Bitcoin price data (2018–2025) identifying volatility patterns, trends, and anomalies. Visualizations communicating market behavior to stakeholders.</div><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">ARIMA</span><span class="proj-tag">Pandas</span><span class="proj-tag">Time-Series</span></div></div>
-      <div class="proj-card"><div class="proj-idx">06</div><div class="proj-title">Uber NYC Demand Analysis – Python</div><div class="proj-desc">Ride data analysis identifying peak demand hours and high-traffic zones using Pandas and NumPy. Insights for fleet optimization and improved customer experience through data-driven recommendations.</div><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Pandas</span><span class="proj-tag">NumPy</span><span class="proj-tag">EDA</span></div></div>
-      <div class="proj-card"><div class="proj-idx">07</div><div class="proj-title">Adidas Sales Dashboard – Excel</div><div class="proj-desc">Interactive Excel dashboard analyzing regional sales performance. KPIs for Total Sales, Profit, and Units Sold with dynamic charts, maps, and Year/Region/Product filtering for executive reporting.</div><div class="proj-tags"><span class="proj-tag">Excel</span><span class="proj-tag">PivotTables</span><span class="proj-tag">KPI Design</span><span class="proj-tag">Visualization</span></div></div>
-      <div class="proj-card"><div class="proj-idx">08</div><div class="proj-title">Global Sales Dashboard – Tableau &amp; SQL</div><div class="proj-desc">Interactive Tableau dashboard for global sales and customer segmentation. Currency normalization, dynamic Year/Country/Category filters, and trend analysis for operational decision-making.</div><div class="proj-tags"><span class="proj-tag">Tableau</span><span class="proj-tag">SQL</span><span class="proj-tag">Segmentation</span><span class="proj-tag">Normalization</span></div></div>
-      <div class="proj-card"><div class="proj-idx">09</div><div class="proj-title">Excel Reporting Automation – VBA</div><div class="proj-desc">Automated reporting using PivotTables and VBA macros for customer and order analysis. Interactive dashboards improving reporting efficiency and enabling real-time business insights for stakeholders.</div><div class="proj-tags"><span class="proj-tag">Excel VBA</span><span class="proj-tag">PivotTables</span><span class="proj-tag">Automation</span><span class="proj-tag">BI Reporting</span></div></div>
+      <div class="proj-card">
+        <div class="proj-idx">01</div>
+        <div class="proj-title">Healthcare Price Transparency – Azure Synapse & Power BI</div>
+        <div class="proj-desc">SQL-based ETL transformation logic in Azure Synapse Analytics with Power BI semantic models for cross-hospital pricing analysis. Governed, traceable datasets enabling scalable healthcare analytics.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">Azure Synapse</span><span class="proj-tag">Power BI</span><span class="proj-tag">T-SQL</span><span class="proj-tag">Data Lineage</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-idx">02</div>
+        <div class="proj-title">Healthcare Price Transparency Pipeline – AWS</div>
+        <div class="proj-desc">Automated ETL pipeline via AWS Lambda, Glue Data Catalog, and Athena ingesting and analyzing hospital pricing datasets. Improved pipeline efficiency by 45% and Athena query performance by 50%.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">AWS Lambda</span><span class="proj-tag">AWS Glue</span><span class="proj-tag">AWS Athena</span><span class="proj-tag">ETL</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-idx">03</div>
+        <div class="proj-title">Customer & Sales Analytics – Advanced SQL & Tableau</div>
+        <div class="proj-desc">25+ advanced SQL queries (CTEs, window functions, subqueries) for customer segmentation, revenue trends, and product profitability. Interactive Tableau and Power BI dashboards for executive BI reporting.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">Advanced SQL</span><span class="proj-tag">Tableau</span><span class="proj-tag">Power BI</span><span class="proj-tag">Segmentation</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-idx">04</div>
+        <div class="proj-title">HR Analytics Dashboard – Power BI / DAX</div>
+        <div class="proj-desc">Interactive Power BI HR dashboard analyzing employee attrition across demographics, roles, salary bands, and tenure. Dynamic department-level KPIs using DAX measures and M365 Dataverse.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">Power BI</span><span class="proj-tag">DAX</span><span class="proj-tag">M365 Dataverse</span><span class="proj-tag">Power Platform</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-idx">05</div>
+        <div class="proj-title">Bitcoin Price Trend Analysis – Python Time-Series</div>
+        <div class="proj-desc">ARIMA-based time-series analysis on Bitcoin price data (2018–2025) identifying volatility patterns, trends, and anomalies. Visualizations communicating market behavior to stakeholders.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">ARIMA</span><span class="proj-tag">Pandas</span><span class="proj-tag">Time-Series</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-idx">06</div>
+        <div class="proj-title">Uber NYC Demand Analysis – Python</div>
+        <div class="proj-desc">Ride data analysis identifying peak demand hours and high-traffic zones using Pandas and NumPy. Insights for fleet optimization and improved customer experience through data-driven recommendations.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Pandas</span><span class="proj-tag">NumPy</span><span class="proj-tag">EDA</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-idx">07</div>
+        <div class="proj-title">Adidas Sales Dashboard – Excel</div>
+        <div class="proj-desc">Interactive Excel dashboard analyzing regional sales performance. KPIs for Total Sales, Profit, and Units Sold with dynamic charts, maps, and Year/Region/Product filtering for executive reporting.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">Excel</span><span class="proj-tag">PivotTables</span><span class="proj-tag">KPI Design</span><span class="proj-tag">Visualization</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-idx">08</div>
+        <div class="proj-title">Global Sales Dashboard – Tableau & SQL</div>
+        <div class="proj-desc">Interactive Tableau dashboard for global sales and customer segmentation. Currency normalization, dynamic Year/Country/Category filters, and trend analysis for operational decision-making.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">Tableau</span><span class="proj-tag">SQL</span><span class="proj-tag">Segmentation</span><span class="proj-tag">Normalization</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-idx">09</div>
+        <div class="proj-title">Excel Reporting Automation – VBA</div>
+        <div class="proj-desc">Automated reporting using PivotTables and VBA macros for customer and order analysis. Interactive dashboards improving reporting efficiency and enabling real-time business insights for stakeholders.</div>
+        <div class="proj-footer"><div class="proj-tags"><span class="proj-tag">Excel VBA</span><span class="proj-tag">PivotTables</span><span class="proj-tag">Automation</span><span class="proj-tag">BI Reporting</span></div><a href="https://github.com/Karthik9492" target="_blank" class="proj-link">GitHub →</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -504,15 +581,29 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
       <div>
         <div class="section-eyebrow" style="margin-bottom:1.25rem;">Certifications</div>
         <div class="certs-list">
-          <div class="cert-item"><div class="cert-mark">☁</div><div><div class="cert-name">AWS Certified Cloud Practitioner</div><div class="cert-org">Amazon Web Services</div></div></div>
-          <div class="cert-item"><div class="cert-mark">⚡</div><div><div class="cert-name">Salesforce Certified Administrator</div><div class="cert-org">Salesforce</div></div></div>
+          <div class="cert-item">
+            <div class="cert-mark">AWS</div>
+            <div><div class="cert-name">AWS Certified Cloud Practitioner</div><div class="cert-org">Amazon Web Services</div></div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-mark">SF</div>
+            <div><div class="cert-name">Salesforce Certified Administrator</div><div class="cert-org">Salesforce</div></div>
+          </div>
         </div>
       </div>
       <div>
         <div class="section-eyebrow" style="margin-bottom:1.25rem;">Education</div>
         <div class="edu-list">
-          <div class="edu-item"><div class="edu-degree">MS in Business Analytics &amp; Artificial Intelligence</div><div class="edu-school">University of Texas at Dallas</div><div class="edu-date">August 2023 – May 2025 · Richardson, TX</div></div>
-          <div class="edu-item"><div class="edu-degree">BS in Chemistry</div><div class="edu-school">GITAM University</div><div class="edu-date">December 2017 – December 2020 · India</div></div>
+          <div class="edu-item">
+            <div class="edu-degree">MS in Business Analytics and Artificial Intelligence</div>
+            <div class="edu-school">University of Texas at Dallas</div>
+            <div class="edu-date">August 2023 – May 2025 · Richardson, TX</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">BS in Chemistry</div>
+            <div class="edu-school">GITAM University</div>
+            <div class="edu-date">December 2017 – December 2020 · India</div>
+          </div>
         </div>
       </div>
     </div>
@@ -525,20 +616,32 @@ footer { padding: 2rem 5rem; border-top: 1px solid var(--rule); display: flex; j
     <div class="section-eyebrow">Contact</div>
     <div class="contact-inner">
       <h2 class="contact-headline">Open to new<br><em style="font-style:italic;color:var(--navy-300)">opportunities</em></h2>
-      <p class="contact-sub">Available for Senior Data Engineer, Data Platform Engineer, and Analytics Engineering roles. Let's connect.</p>
+      <p class="contact-sub">Available for Senior Data Engineer, MES Data Engineer, and Manufacturing Analytics Engineer roles in pharma or regulated industries. Let's connect.</p>
       <div class="contact-grid">
-        <a href="mailto:pkarthikusa1@gmail.com" class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-item-label">Email</div><div class="contact-item-val">pkarthikusa1@gmail.com</div></div></a>
-        <a href="tel:3176624035" class="contact-item"><div class="contact-icon">☎</div><div><div class="contact-item-label">Phone</div><div class="contact-item-val">(317) 662-4035</div></div></a>
-        <a href="https://www.linkedin.com/in/karthik-peddavarrapu/" target="_blank" class="contact-item"><div class="contact-icon" style="font-family:var(--mono);font-size:12px;font-weight:500;">in</div><div><div class="contact-item-label">LinkedIn</div><div class="contact-item-val">karthik-peddavarrapu</div></div></a>
-        <a href="https://github.com/Karthik9492" target="_blank" class="contact-item"><div class="contact-icon" style="font-family:var(--mono);font-size:11px;">&lt;/&gt;</div><div><div class="contact-item-label">GitHub</div><div class="contact-item-val">Karthik9492</div></div></a>
+        <a href="mailto:pkarthikusa1@gmail.com" class="contact-item">
+          <div class="contact-icon">@</div>
+          <div><div class="contact-item-label">Email</div><div class="contact-item-val">pkarthikusa1@gmail.com</div></div>
+        </a>
+        <a href="tel:3176624035" class="contact-item">
+          <div class="contact-icon">#</div>
+          <div><div class="contact-item-label">Phone</div><div class="contact-item-val">(317) 662-4035</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/karthikpeddavarrapu/" target="_blank" class="contact-item">
+          <div class="contact-icon">in</div>
+          <div><div class="contact-item-label">LinkedIn</div><div class="contact-item-val">karthikpeddavarrapu</div></div>
+        </a>
+        <a href="https://github.com/Karthik9492" target="_blank" class="contact-item">
+          <div class="contact-icon">&lt;/&gt;</div>
+          <div><div class="contact-item-label">GitHub</div><div class="contact-item-val">Karthik9492</div></div>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="footer-l">Karthik Peddavarapu · Senior Data Engineer </div>
-  <div class="footer-r">HTML · CSS · JS</div>
+  <div class="footer-l">Karthik Peddavarapu · Senior Data & MES Engineer</div>
+  <div class="footer-r">Indianapolis, IN · Open to new opportunities</div>
 </footer>
 
 <script>
